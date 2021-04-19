@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="style/st.css">
+</head>
+<body>
+    <header>
+        <%- include('layout/header.ejs')%>
+    </header>
+<main>
+    <%toto.forEach(element=>{%>
+<div id="allimg">
+<form action="/all" method="POST">
+<h3><%= element.name%> </h3>
+<input type="hidden" value="<%= element.name%>" name="one">
+<img style="border: double;" src="<%= element.img%> ">
+<input type="hidden" value="<%= element.img%> " name="two">
+<p><%= element.level%> </p>
+<input type="hidden" value="<%= element.level%>" name="three">
+<button type="submit">save</button>
+</form>
+</div>
+<%})%>
+</main>
+<footer>
+    <%- include('layout/footer.ejs')%>
+</footer>
+
+
+
+</body>
+</html>

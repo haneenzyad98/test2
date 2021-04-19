@@ -1,0 +1,7 @@
+
+CREATE TABLE IF NOT EXISTS dig(
+    id SERIAL NOT NULL,
+    name VARCHAR(250) NOT NULL,
+    image TEXT NOT NULL,
+    level VARCHAR(250) NOT NULL
+);
